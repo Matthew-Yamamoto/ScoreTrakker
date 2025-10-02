@@ -15,15 +15,16 @@ public class ScoreTrakker {
 		while(in.hasNextLine()) {
 			String name = in.nextLine();
 			String score = in.nextLine();
-			Integer intScore = Integer.parseInt(score);
+			int intScore = Integer.parseInt(score);
 			
-			students.add(new Student(name,score));
+			students.add(new Student(name,intScore));
 		}
 
 	}
 	
 	public void printInOrder() {
 		for(Student student : students) {
+			System.out.println(student);
 			student.compareTo(student);
 		}
 	}
